@@ -3,9 +3,14 @@
 const username = Cypress.env('USERNAME');
 const password = Cypress.env('PASSWORD');
 
-const u_name = 'Sarah Walker';
+const user = {
+    name: 'Joe Doe',
+    username: 'joedoe',
+    email: 'joed@gmail.com',
+    password: 'password'
+};
 
-describe('user form', () => {
+describe('user page', () => {
     beforeEach(() => {
         cy.login(username, password);
     });
@@ -18,16 +23,16 @@ describe('user form', () => {
             .should('equal', 'Create User');
 
         cy.get('#name')
-            .type(u_name)
+            .type(user.name)
 
         cy.get('#username')
-            .type('swalker')
+            .type(user.username)
 
         cy.get('#email')
-            .type('swalker@gmail.com')
+            .type(user.email)
 
         cy.get('#password')
-            .type('password')
+            .type(user.password)
 
         cy.get('#roles').click();
         cy.wait(2000)
@@ -45,33 +50,33 @@ describe('user form', () => {
 
     it('search an existing user with name', () => {
         cy.get('#search')
-        .type(u_name)
+            .type(user.name)
 
         cy.get('.mat-row > .cdk-column-name')
-        .invoke('text')
-        .should('contain', u_name);
+            .invoke('text')
+            .should('contain', user.name);
 
     });
 
     it('update an existing user', () => {
         cy.get(':nth-child(10) > .cdk-column-edit > .mat-primary > .mat-button-wrapper > .mat-icon')
-        .click();
+            .click();
 
-          cy.get('#password')
-              .type('password')
+        cy.get('#password')
+            .type(user.password)
 
-          cy.get('#roles').click();
-          cy.wait(2000)
-          cy.get('#mat-option-4 > .mat-option-text').click()
+        cy.get('#roles').click();
+        cy.wait(2000)
+        cy.get('#mat-option-4 > .mat-option-text').click()
 
-          cy.get('#submit')
-              .click();
+        cy.get('#submit')
+            .click();
 
-          cy.wait(1000)
+        cy.wait(1000)
 
-          cy.get('.mat-simple-snackbar > span')
-              .invoke('text')
-              .should('equal', 'User updated successfully.');
+        cy.get('.mat-simple-snackbar > span')
+            .invoke('text')
+            .should('equal', 'User updated successfully.');
 
     })
 
