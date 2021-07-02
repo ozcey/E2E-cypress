@@ -71,4 +71,4 @@ describe('Applicant page', () => {
         cy.get('#submit')
         .should('be.disabled')
     })
-})
+});
