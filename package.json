@@ -1,0 +1,23 @@
+{
+  "name": "E2E-cypress",
+  "version": "1.0.0",
+  "description": "End to End Testing with Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ozcey/E2E-cypress.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ozcey/E2E-cypress/issues"
+  },
+  "homepage": "https://github.com/ozcey/E2E-cypress#readme",
+  "devDependencies": {
+    "cypress": "^7.6.0"
+  }
+}
