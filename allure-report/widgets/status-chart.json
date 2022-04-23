@@ -1,0 +1,11 @@
+[ {
+  "uid" : "6ef8e7bea6ca21b8",
+  "name" : "applicant form",
+  "time" : {
+    "start" : 1649548767833,
+    "stop" : 1649548792297,
+    "duration" : 24464
+  },
+  "status" : "failed",
+  "severity" : "normal"
+} ]
