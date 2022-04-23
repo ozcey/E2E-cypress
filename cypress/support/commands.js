@@ -24,21 +24,39 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+
 Cypress.Commands.add('login', (username, password) => {
     cy.visit('login')
 
-     cy.get('#username')
-         .type(username)
+    cy.get('#username')
+        .type(username)
 
-     cy.get('#password')
-         .type(password)
+    cy.get('#password')
+        .type(password)
 
-     cy.get('#submit')
-         .click();
+    cy.get('#submit')
+        .click();
 
-     cy.url().should('include', 'user')
+    cy.url().should('include', 'user')
 
-     cy.get('#create_user')
-         .invoke('text')
-         .should('equal', 'Create User')
+    cy.get('#create_user')
+        .invoke('text')
+        .should('equal', 'Create User')
+});
+
+Cypress.Commands.add('signin', (username, password) => {
+ const url = 'http://localhost:5000/auth/login'
+    cy.request({
+        url: url,
+        method: 'POST',
+        body: {
+            username: username,
+            password: password
+        }
+    }).then((response) => {
+        expect(response.status).to.equal(200);
+        const body = response.body;
+        console.log('body', body);
+        cy.window().then(win => win.localStorage.setItem('jwt', body.token))
+    })
 });

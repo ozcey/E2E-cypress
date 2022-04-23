@@ -1,0 +1,22 @@
+{
+  "dbc863345ef018794084982c6250129d" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "6ef8e7bea6ca21b8",
+      "status" : "failed",
+      "statusDetails" : "Timed out retrying after 4000ms: Expected to find content: 'Applicant created successfully2.' within the element: <div.alert.alert-success.alert-dismissible.fade.show.ng-star-inserted> but never did.",
+      "time" : {
+        "start" : 1649548767833,
+        "stop" : 1649548792297,
+        "duration" : 24464
+      }
+    } ]
+  }
+}

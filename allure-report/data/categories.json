@@ -1,0 +1,30 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "Timed out retrying after 4000ms: Expected to find content: 'Applicant created successfully2.' within the element: <div.alert.alert-success.alert-dismissible.fade.show.ng-star-inserted> but never did.",
+      "children" : [ {
+        "name" : "applicant form",
+        "uid" : "6ef8e7bea6ca21b8",
+        "parentUid" : "f3b73a60cee0ed2fa639c59de4386c46",
+        "status" : "failed",
+        "time" : {
+          "start" : 1649548767833,
+          "stop" : 1649548792297,
+          "duration" : 24464
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "f3b73a60cee0ed2fa639c59de4386c46"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ]
+}

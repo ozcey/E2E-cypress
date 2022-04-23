@@ -1,0 +1,26 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "Applicant page",
+    "children" : [ {
+      "name" : "applicant form",
+      "uid" : "6ef8e7bea6ca21b8",
+      "parentUid" : "3c619646555bf11f61b5ff77f600fe91",
+      "status" : "failed",
+      "time" : {
+        "start" : 1649548767833,
+        "stop" : 1649548792297,
+        "duration" : 24464
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 1,
+      "retriesStatusChange" : true,
+      "parameters" : [ ]
+    } ],
+    "uid" : "3c619646555bf11f61b5ff77f600fe91"
+  } ]
+}
